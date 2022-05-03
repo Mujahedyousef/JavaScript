@@ -78,3 +78,26 @@
    let age=25
    console.log (`My name is ${name} and my age is : ${age} `) //My name is mujahed and my age is : 25
    ````
+   ------
+   ## Other ways to change the string to Numbers
+   ````
+   1. using by function called Number()=> any data inside ()convert to number 
+
+   console.log(Number("4"))//4 (number) 
+   يقوم بتحويل أي نص له قيمة رقمية إلى رقم 
+   به عيب انه لا يستطيع تحويل الى رقم إذا اتى بعد الرقم نص 
+
+  console.log(Number("4 mujahed"))//NaN
+   ----------
+    2. using by parseInt()=> ang data inside () convert to number if be number before text
+    تقوم بفصل الرقم عن الكلام وتحويله إلى رقم بشرط أن  الرقم يكون قبل الكلام     
+    المشكلة الثانية أنها دائما تعيد رقم صحيح بدون فاصلة عشرية 
+    console.log(parseInt("4 mujahed"))//4(number)
+     console.log(parseInt(" mujahed  5"))//Nan
+     console.log(parseInt("5.5"))//5
+     --------
+     3. using by parseFloat()=> ang data inside ()   convert to number if be number before text
+      نفس استخدام السابقة لمن تعيد الرقم مع فواصل عشرية 
+     console.log(parseInt("5.5 mujahed"))//5.5(number)
+
+   ````
