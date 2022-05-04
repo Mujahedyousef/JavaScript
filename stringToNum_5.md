@@ -44,7 +44,7 @@ console.log(+null) //0
      console.log(parseInt("5.5"))//5
      --------
      3. using by parseFloat()=> ang data inside ()   convert to number if be number before text
-      نفس استخدام السابقة لمن تعيد الرقم مع فواصل عشرية 
+      نفس استخدام السابقة  لكن الرقم مع فواصل عشرية 
      console.log(parseInt("5.5 mujahed"))//5.5(number)
 
    ````
