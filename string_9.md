@@ -4,13 +4,13 @@
 
 هي قيمة تسلسلية تعني تخزين العناصر بشكب متتابع في أماكن محدده لها ، الفراغ له قيمة
 
-1.  repeat( )
+1.  ## repeat( )
 
     > can repeat the text sentence as many times as you pass it to her.
 
              "Mujahed".repeat(2)//"MujahedMujahed"
 
-2.  length
+2.  ## length
 
     > You can find the number of a text string and return the number of characters.
 
@@ -18,7 +18,7 @@
          "Mujahed ".length//8 space
         يمكنك من  معرفة عدد السلسلة النصية و ارجاع عدد الاحرف
 
-3.  Getting to the character
+3.  ## Getting to the character
 
     1. To access a specific index in any text string, write the variable name and then the desired character number in square brackets.
        ```
@@ -27,7 +27,7 @@
        name[1]// "e"
        للوصول الى index معين في اي سلسلة نصية تكتب اسم المتغير ثم رقم الحرف المراد في الاقواس المربعة
        ```
-    1. charAt( index)
+    1. ## charAt( index)
 
        Using charAt to get to the desired character and to get to it we pass the desired index
 
@@ -48,7 +48,7 @@
 
 ## Find character in text strings
 
-> indexOf( )
+> ## indexOf( )
 
 1. indexOf("character")
 
@@ -82,7 +82,7 @@
 
    ***
 
-> lastIndexOf( )
+> ## lastIndexOf( )
 
 1. lastIndexOf("character")
 
@@ -109,7 +109,32 @@
 
 ---
 
-> slice( )
+> ## split( )
+
+- Returns a copy of the String in the form of an array.
+
+ترجع نسخة من الـ String على شكل مصفوفة و اذا تم مرير لها حرف تقوم باقتطاع هذه السلسلة النصية من مكان هذا الحرف في النص
+
+```
+let name="hello world in javaScript";
+1. name.split(' ')//["hello", "world" ,"in" ,"javaScript"]// راح يعمل قطع عند كل فراغ ويحفظهم داخل مصفوفة كعناصر
+------
+2. name.split('')// ['h','e','l','l','o'......]
+هنا سيعتبرها حرف ويثطع عند كل حرف
+-------
+3.  name.split('l')// ['he', '', 'o wor', 'd in javaScript']
+راح يقطع من عند هذا الحرف
+-----
+4. name.split('',3)//['h','e','l']
+هنا استطيع تحديد عدد المرات التي اريد ان يقوم بالقطع فيها يطبقها ولا يعيد الباقي
+
+```
+
+---
+
+## Cut text in javascript
+
+> ### slice( )
 
 - During this method, you can chop the text string and return what you want from it by passing the index number at the beginning of the slicing and the index number at the end of the slicing, and so it returns the cut part of the text, and if you do not pass any numbers, the index will return the whole text.
 
@@ -120,34 +145,81 @@
 
    عند وضع مكان بداية التقطيع
    يكون موقع البدية متضمن الاعادة
+
    2. name.slice(2)//"llo world"
+    name.slice(start)
 
    عند وضع بداية ونهاية التقطيع
    سيتضمن البداية ولن يتضمن النهاية
-   2. name.slice(2,5)//"llo" (سيبدأ من 2 ويأخذها وينتهي عن 4 ويأخذها ولن يأخذ 5)
-   وهي عبارة عن عدد الأحرف بين البداية والنهاية 
+   3. name.slice(2,5)//"llo"
+   name.slice(start,end)
+    (سيبدأ من 2 ويأخذها وينتهي عن 4 ويأخذها ولن يأخذ 5)
+   وهي عبارة عن عدد الأحرف بين البداية والنهاية
    slice(1,10)==10-1=9
-    سيظهر 9 أحرف 
+    سيظهر 9 أحرف
+    -------
+   4. يمكن إعطاءه أرقام سالبة بحيث سيبدأ العد من اليسار إلى اليمين
+    ويرجعها طبيعي كما هي مكتوبة
+
+   name.slice(start,end)
+       4. name.slice(-1,-6)//"world"
+       d=-1-----w=-6
+
+       name.slice(start)
+       name.slice(-6)//"world"
+       راح يبدأ من -6
+
+
   ```
-----
-> split( )
- * Returns a copy of the String in the form of an array.
 
-  ترجع نسخة من الـ String على شكل مصفوفة و اذا تم مرير لها حرف تقوم باقتطاع هذه السلسلة النصية من مكان هذا الحرف في النص
+---
+> ### subString( )
 
-  ````
-  let name="hello world in javaScript";
-  1. name.split(' ')//["hello", "world" ,"in" ,"javaScript"]// راح يعمل قطع عند كل فراغ ويحفظهم داخل مصفوفة كعناصر 
-  ------
-  2. name.split('')// ['h','e','l','l','o'......]
-  هنا سيعتبرها حرف ويثطع عند كل حرف
-  -------
-  3.  name.split('l')// ['he', '', 'o wor', 'd in javaScript']
-  راح يقطع من عند هذا الحرف 
-  -----
-  4. name.split('',3)//['h','e','l']
-  هنا استطيع تحديد عدد المرات التي اريد ان يقوم بالقطع فيها يطبقها ولا يعيد الباقي
+ * Through this method, you can chop the text string and return what you want from it by passing a positive number only to the value of the index at the beginning of the fragmentation and a positive number only to the value of the index at the end of the fragmentation, and so it returns the cut part of the text and if you do not pass any numbers index It will return the full text.
 
-  ````
-  ----------
-  
+  ```
+   let name="hello world";
+  بدون وضع بداية التقطيع سيعيد النص كامل
+   1. name.subString()//"hello world"
+
+   عند وضع مكان بداية التقطيع
+   يكون موقع البدية متضمن الاعادة
+
+   2. name.subString(2)//"llo world"
+    name.subString(start)
+
+   عند وضع بداية ونهاية التقطيع
+   سيتضمن البداية ولن يتضمن النهاية
+   3. name.subString(2,5)//"llo"
+   name.subString(start,end)
+    (سيبدأ من 2 ويأخذها وينتهي عن 4 ويأخذها ولن يأخذ 5)
+   وهي عبارة عن عدد الأحرف بين البداية والنهاية
+   subString(1,10)==10-1=9
+    سيظهر 9 أحرف
+    ------
+    الفرق بينها وبين
+     slice
+   هو أنها لا تأخذ قيمة سالبة 
+  ```
+  ----
+  > ### subStr( )
+
+   * Through this method, you can cut the text string and return what you want from it by passing the index at the beginning of the slicing and then entering the number of characters you want to cut, and so it returns the cut part of the text, and if you do not pass any numbers, the index will return the whole text.
+
+   ```
+   
+   إن تركت فارغة تعيد الكلام كامل
+
+   1. let name="hello world"
+   name.subStr()//"hello world"
+
+   -----
+   2. يمكن وضع نقطة البداية لبدء الارجاع منها 
+    name.subStr(start)
+   name.subStr(1)// "ello world"
+   -----
+يمكن  وضع نقطة البداية وعدد العناصر المراد إرجاعهم ويبدأ العد من نقطة البداية
+
+   3. name.subStr(start, length)
+   name.subStr(1, 5)//"ello "
+   ```
