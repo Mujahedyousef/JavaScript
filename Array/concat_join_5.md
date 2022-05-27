@@ -43,7 +43,7 @@ const array3 = array1.concat(array2,array4,array5,array6);
 const array1 = ['Mujahed', 'fayeq', 'hitham'];
 
 1 - console.log(array1.join())
-//Mujahed,fayeq,hitham سيتم الغرض  نص 
+//Mujahed,fayeq,hitham سيتم العرض  كنص 
 
 2. console.log(array1.join(''))//Mujahedfayeqhitham
 تعني انه قم بحذف مكان كل فاصلة تفصل بين العناصر  
