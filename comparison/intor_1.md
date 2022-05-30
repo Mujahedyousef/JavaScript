@@ -60,3 +60,9 @@ console.log(email===askUser.toLowerCase().trim())//true
 قمت بحذف مسافة البداية لان الفراغ يعتبر حرف وقمت بتصغير جميع الحروف 
 فأصبحت القيم متساوية 
 ```
+----
+
+[javascript-operators](https://www.tutorialsteacher.com/javascript/javascript-operators)
+
+(==)تقارن الvalue فقط 
+(===)تقارن الvalue , data type 
