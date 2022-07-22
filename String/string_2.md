@@ -54,7 +54,7 @@
 
    > Through this method, you can search for any character or text in any text string from the beginning of the text string, by passing the character you want to search for, and then return to you the index number if it exists.
 
-   من خلال هذا ال method يمكنك البحث عن اي حرف او نص في اي سلسلة نصية من باداية السلسلة النصية و ذلك من خلال تمرير الحرف المراد البحث عنه و من ثم يرجع لك رقم ال index اذا كان موجود
+   من خلال هذا ال method يمكنك البحث عن اي حرف او نص في اي سلسلة نصية من بداية السلسلة النصية و ذلك من خلال تمرير الحرف المراد البحث عنه و من ثم يرجع لك رقم ال index اذا كان موجود
 
    ```
    let name="hello world";
